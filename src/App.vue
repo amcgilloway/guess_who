@@ -26,7 +26,7 @@ import GuessWhoView from './views/GuessWhoView';
       GuessWhoView
     },
     mounted(){
-      const baseUrl = 'http://localhost:3000/'
+      const baseUrl = 'https://codeclan-guess-who.herokuapp.com/'
       guessWhoService.getData( baseUrl + 'api/characters')
       .then(characters => this.characters = characters)
       guessWhoService.getData(baseUrl + 'api/choices')
