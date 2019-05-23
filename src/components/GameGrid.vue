@@ -52,7 +52,7 @@ export default {
     eventBus.$on("option-selected", (option) => {
       this.characters.forEach((character) => {
         if(option.remainingChoices){
-          if (option.remainingChoices/length >1){
+          if (option.remainingChoices.length > 1){
           console.log(character.name, character.hair_colour, option.remainingChoices.includes(character[option.characteristic]));
            if (!option.remainingChoices.includes(character[option.characteristic])){
             this.removeCharacter(character)
